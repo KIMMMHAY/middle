@@ -1,0 +1,1798 @@
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&display=swap"); /*Merriweather Sans*/
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background: url("../source/background_wave2.png") no-repeat center;
+  background-size: cover;
+  position: fixed;
+}
+
+.video-container {
+  width: 950px;
+  height: 380px;
+  background-color: gray;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 중앙이동 */
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.line1 {
+  position: absolute;
+  width: 4px;
+  height: 40%;
+  top: 0;
+  right: 23%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 6vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line2 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 23.5%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 4s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line3 {
+  position: absolute;
+  width: 2px;
+  height: 50%;
+  top: 0;
+  right: 24%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 10s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line4 {
+  /*굵은거*/
+  position: absolute;
+  width: 6px;
+  height: 50%;
+  top: 0;
+  right: 26%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line4::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line5 {
+  position: absolute;
+  width: 4px;
+  height: 40%;
+  top: 0;
+  right: 27%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line5::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line6 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 27.5%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line6::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line7 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 28%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line7::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 7vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 2s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line8 {
+  position: absolute;
+  width: 3px;
+  height: 40%;
+  border-radius: 5px;
+  top: 0;
+  right: 28.3%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line8::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line9 {
+  /*젤굵은거*/
+  position: absolute;
+  width: 13px;
+  height: 50%;
+  top: 0;
+  right: 29%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line9::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 16vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 4s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line10 {
+  position: absolute;
+  width: 4px;
+  height: 40%;
+  top: 0;
+  right: 31%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line10::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 6vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 2.5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line7 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 32%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line7::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 6vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 6s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line11 {
+  /*젤굵은거*/
+  position: absolute;
+  width: 11px;
+  height: 50%;
+  top: 0;
+  right: 33.5%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line11::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 13vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 6s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line12 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 35%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line12::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line13 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 36%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line13::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 2s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line14 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 36.2%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line14::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line15 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 35%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line15::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line16 {
+  /*중간*/
+  position: absolute;
+  width: 5px;
+  height: 50%;
+  top: 0;
+  right: 38%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line16::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 6vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 6s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line17 {
+  /*중간*/
+  position: absolute;
+  width: 5px;
+  height: 50%;
+  top: 0;
+  right: 38.5%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line17::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line18 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 40%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line18::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line19 {
+  position: absolute;
+  width: 3px;
+  height: 40%;
+  top: 0;
+  right: 40.7%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line19::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 10vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 2s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line20 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 41%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line20::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 13vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 10s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line21 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 41.3%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line21::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 6vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 4s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line22 {
+  position: absolute;
+  width: 4px;
+  height: 40%;
+  top: 0;
+  right: 44%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line22::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 8s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line23 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 45%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line23::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 7vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 4.5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line24 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  top: 0;
+  right: 50%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line24::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 10vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 6.7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line25 {
+  position: absolute;
+  width: 1px;
+  height: 40%;
+  top: 0;
+  right: 60%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line25::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 10vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line26 {
+  position: absolute;
+  width: 1px;
+  height: 40%;
+  top: 0;
+  right: 52%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line26::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 16vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line27 {
+  position: absolute;
+  width: 1px;
+  height: 40%;
+  top: 0;
+  right: 22.5%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line27::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 16vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+/*------------------------------------*/
+/*------------------------------------*/
+/*------------------------------------*/
+
+.line28 {
+  position: absolute;
+  width: 7px;
+  height: 65%;
+  bottom: 0px;
+  left: 22.5%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line28::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line29 {
+  position: absolute;
+  width: 4px;
+  height: 40%;
+  bottom: 0px;
+  left: 23%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line29::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 6vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line30 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  bottom: 0px;
+  left: 24%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line30::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 2s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line31 {
+  position: absolute;
+  width: 7px;
+  height: 65%;
+  bottom: 0px;
+  left: 24.5%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line31::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 12vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line32 {
+  position: absolute;
+  width: 13px;
+  height: 65%;
+  bottom: 0px;
+  left: 26%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line32::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line33 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  bottom: 0px;
+  left: 27%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line33::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line34 {
+  position: absolute;
+  width: 2px;
+  height: 65%;
+  bottom: 0px;
+  left: 29.6%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line34::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 8vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 6s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line35 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  bottom: 0px;
+  left: 27.7%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line35::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line36 {
+  position: absolute;
+  width: 2px;
+  height: 65%;
+  bottom: 0px;
+  left: 28%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line36::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5.5vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line37 {
+  position: absolute;
+  width: 3px;
+  height: 65%;
+  bottom: 0px;
+  left: 31%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line37::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 6.5vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 4s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line38 {
+  position: absolute;
+  width: 3px;
+  height: 40%;
+  bottom: 0px;
+  left: 32%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line38::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 10vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line39 {
+  position: absolute;
+  width: 3px;
+  height: 65%;
+  bottom: 0px;
+  left: 32.4%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line39::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 2s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line40 {
+  position: absolute;
+  width: 7px;
+  height: 65%;
+  bottom: 0px;
+  left: 33%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line40::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 10vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 2.5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line41 {
+  position: absolute;
+  width: 2px;
+  height: 65%;
+  bottom: 0px;
+  left: 35%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line41::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 14vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 9s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line42 {
+  position: absolute;
+  width: 3px;
+  height: 65%;
+  bottom: 0px;
+  left: 36.5%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line42::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 8.5vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line43 {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  bottom: 0px;
+  left: 36.8%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line43::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 2s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line44 {
+  position: absolute;
+  width: 1px;
+  height: 65%;
+  bottom: 0px;
+  left: 37.3%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line44::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 13vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 8s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line45 {
+  position: absolute;
+  width: 1px;
+  height: 65%;
+  bottom: 0px;
+  left: 39%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line45::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 6vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line45 {
+  position: absolute;
+  width: 6px;
+  height: 65%;
+  bottom: 0px;
+  left: 40%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line45::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 13vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 4s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line46 {
+  position: absolute;
+  width: 2.5px;
+  height: 65%;
+  bottom: 0px;
+  left: 39%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line46::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 6s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line47 {
+  position: absolute;
+  width: 3px;
+  height: 65%;
+  bottom: 0px;
+  left: 42%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line47::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 2s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line48 {
+  position: absolute;
+  width: 1px;
+  height: 65%;
+  bottom: 0px;
+  left: 43%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line48::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 10vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 10s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line49 {
+  position: absolute;
+  width: 1px;
+  height: 65%;
+  bottom: 0px;
+  left: 48%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line49::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line50 {
+  position: absolute;
+  width: 0.7px;
+  height: 65%;
+  bottom: 0px;
+  left: 56%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line50::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 7vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 4s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line51 {
+  position: absolute;
+  width: 4px;
+  height: 65%;
+  bottom: 0px;
+  left: 45%;
+  background-color: #c0c1c6;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.line51::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 75%,
+    black 100%
+  );
+  animation: drop 3s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+/*
+.logo-container {
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  color: gray;
+  top: 50px;
+  right: 80px;
+  overflow: hidden;
+}
+*/
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.LIFE {
+  font-size: 200px;
+  font-weight: 600;
+  position: fixed;
+  top: 45px;
+  left: 100px;
+  color: black;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  font-family: "Merriweather Sans", serif;
+}
+
+.OASIS {
+  font-size: 200px;
+  font-weight: 600;
+  position: fixed;
+  bottom: 45px;
+  right: 100px;
+  color: black;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  font-family: "Merriweather Sans", serif;
+}
+
+.galzeung {
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 540px;
+  left: 185px;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  font-family: "IBM Plex Sans KR", monospace;
+}
+
+.thirst {
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 370px;
+  right: 20px;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  transform: rotate(90deg);
+  transform-origin: left top;
+  font-family: "Merriweather Sans", serif;
+}
+
+.PLACE {
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  top: 75px;
+  right: 50px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  font-family: "Merriweather Sans", serif;
+}
+
+.FALL {
+  font-size: 17px;
+  font-weight: bold;
+  position: absolute;
+  top: 110px;
+  right: 50px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  font-family: "IBM Plex Sans KR", monospace;
+}
+
+.DATE {
+  font-size: 17px;
+  font-weight: normal;
+  position: absolute;
+  top: 150px;
+  right: 50px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  font-family: "IBM Plex Sans KR", monospace;
+}
+
+.TIME {
+  font-size: 17px;
+  font-weight: normal;
+  position: absolute;
+  top: 170px;
+  right: 50px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  font-family: "IBM Plex Sans KR", monospace;
+}
+
+.Laneige {
+  font-size: 23px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 120px;
+  left: 50px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  font-family: "Merriweather Sans", monospace;
+}
+
+.forall {
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  bottom: 90px;
+  left: 50px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  font-family: "Merriweather Sans", monospace;
+}
+
+.shefaces {
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  bottom: 67px;
+  left: 50px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  font-family: "Merriweather Sans", monospace;
+}
+
+.click {
+  font-size: 15px;
+  font-weight: normal;
+  position: absolute;
+  bottom: 43px;
+  left: 50px;
+  opacity: 0;
+  color: rgb(61, 63, 63);
+  animation: fadeIn 1s forwards;
+  font-family: "IBM Plex Sans KR", monospace;
+}
+
+/*
+요고 활용하기
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+font-size: 18px;         폰트 크기 설정
+font-weight: 600;         폰트 굵기 설정 (폰트 굵기는 px 쓰면 안됨! 주의)
+font-family: Arial, sans-serif;   글꼴 설정 
+text-align: center;       텍스트를 중앙 정렬 
+position: absolute;       부모 요소 기준으로 위치 조정 가능 
+top: 20%;                 부모 요소 위에서 20% 지점에 배치 
+left: 50%;
+transform: translateX(-50%); /* 중앙 정렬 보정 
+line-height: 1.5;         줄 간격 설정 
+background-color: rgba(0, 0, 0, 0.5); 텍스트 배경 반투명 처리 
+padding: 10px;            텍스트 주변 여백 추가 
+border-radius: 5px;      모서리 둥글게 처리
+*/
